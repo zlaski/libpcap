@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A82544E0-6F92-42D5-9E01-ECCD641D31C8}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="libpcap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="charconv.h" />
+    <ClInclude Include="diag-control.h" />
+    <ClInclude Include="dlpisubs.h" />
+    <ClInclude Include="ethertype.h" />
+    <ClInclude Include="extract.h" />
+    <ClInclude Include="fmtutils.h" />
+    <ClInclude Include="ftmacros.h" />
+    <ClInclude Include="gencode.h" />
+    <ClInclude Include="ieee80211.h" />
+    <ClInclude Include="libpcap.resources.h" />
+    <ClInclude Include="libpcap.h" />
+    <ClInclude Include="llc.h" />
+    <ClInclude Include="nametoaddr.h" />
+    <ClInclude Include="optimize.h" />
+    <ClInclude Include="pcap-bpf.h" />
+    <ClInclude Include="pcap-bt-linux.h" />
+    <ClInclude Include="pcap-bt-monitor-linux.h" />
+    <ClInclude Include="pcap-common.h" />
+    <ClInclude Include="pcap-dag.h" />
+    <ClInclude Include="pcap-dbus.h" />
+    <ClInclude Include="pcap-dpdk.h" />
+    <ClInclude Include="pcap-int.h" />
+    <ClInclude Include="pcap-namedb.h" />
+    <ClInclude Include="pcap-netfilter-linux.h" />
+    <ClInclude Include="pcap-netmap.h" />
+    <ClInclude Include="pcap-rdmasniff.h" />
+    <ClInclude Include="pcap-rpcap.h" />
+    <ClInclude Include="pcap-snf.h" />
+    <ClInclude Include="pcap-types.h" />
+    <ClInclude Include="pcap-usb-linux-common.h" />
+    <ClInclude Include="pcap-usb-linux.h" />
+    <ClInclude Include="pcap-util.h" />
+    <ClInclude Include="pcap.h" />
+    <ClInclude Include="pcap\bluetooth.h" />
+    <ClInclude Include="pcap\bpf.h" />
+    <ClInclude Include="pcap\can_socketcan.h" />
+    <ClInclude Include="pcap\compiler-tests.h" />
+    <ClInclude Include="pcap\dlt.h" />
+    <ClInclude Include="pcap\funcattrs.h" />
+    <ClInclude Include="pcap\ipnet.h" />
+    <ClInclude Include="pcap\namedb.h" />
+    <ClInclude Include="pcap\nflog.h" />
+    <ClInclude Include="pcap\pcap-inttypes.h" />
+    <ClInclude Include="pcap\pcap.h" />
+    <ClInclude Include="pcap\sll.h" />
+    <ClInclude Include="pcap\socket.h" />
+    <ClInclude Include="pcap\usb.h" />
+    <ClInclude Include="pcap\vlan.h" />
+    <ClInclude Include="pflog.h" />
+    <ClInclude Include="portability.h" />
+    <ClInclude Include="ppp.h" />
+    <ClInclude Include="rpcap-protocol.h" />
+    <ClInclude Include="sf-pcap.h" />
+    <ClInclude Include="sf-pcapng.h" />
+    <ClInclude Include="sockutils.h" />
+    <ClInclude Include="sslutils.h" />
+    <ClInclude Include="thread-local.h" />
+    <ClInclude Include="varattrs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="libpcap.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libpcap.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libpcap.Steps.bat" />
+    <None Include="libpcap.Tests.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
+      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

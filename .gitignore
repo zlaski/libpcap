@@ -65,3 +65,6 @@ CMakeFiles/
 *.vcxproj.user
 Debug/
 Release/
+/.build
+/.install
+/.vs
