@@ -112,6 +112,8 @@
   #endif
 #endif
 
+#define PACKAGE_VERSION "1.10.5"
+
 #include <pcap/funcattrs.h>
 
 #include <pcap/pcap-inttypes.h>
@@ -147,6 +149,7 @@ extern "C" {
 #define PCAP_VERSION_MINOR 4
 
 #define PCAP_ERRBUF_SIZE 256
+#define PCAP_MAX_SNAPLEN 262144
 
 /*
  * Compatibility for systems that have a bpf.h that
