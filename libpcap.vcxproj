@@ -4,16 +4,19 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+    <Import Project="$(AKITOOLS)\akibld\akibld-Bare.props" />
   </ImportGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A82544E0-6F92-42D5-9E01-ECCD641D31C8}</ProjectGuid>
   </PropertyGroup>
-  <ItemGroup>
-    <ClCompile Include="libpcap.cpp" />
-  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntDir);$(Install_IncludePath);$(UCRT_IncludePath);$(UM_IncludePath);$(KIT_SHARED_IncludePath)\;$(KM_IncludePath);$(NET_IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="charconv.h" />
+    <ClInclude Include="config.h" />
     <ClInclude Include="diag-control.h" />
     <ClInclude Include="dlpisubs.h" />
     <ClInclude Include="ethertype.h" />
@@ -23,7 +26,6 @@
     <ClInclude Include="gencode.h" />
     <ClInclude Include="ieee80211.h" />
     <ClInclude Include="libpcap.resources.h" />
-    <ClInclude Include="libpcap.h" />
     <ClInclude Include="llc.h" />
     <ClInclude Include="nametoaddr.h" />
     <ClInclude Include="optimize.h" />
@@ -83,9 +85,12 @@
     <None Include="libpcap.Tests.bat" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
-      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
-    </ProjectReference>
+    <ClCompile Include="pcap.c">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ShowIncludes>
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ShowIncludes>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

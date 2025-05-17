@@ -34,9 +34,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="libpcap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pcap\bluetooth.h">
       <Filter>Header Files\pcap</Filter>
     </ClInclude>
@@ -205,6 +202,9 @@
     <ClInclude Include="varattrs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="libpcap.resources.h">
@@ -222,7 +222,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="libpcap.cpp">
+    <ClCompile Include="pcap.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
