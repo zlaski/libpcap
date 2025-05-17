@@ -11,7 +11,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(IntDir);$(Install_IncludePath);$(UCRT_IncludePath);$(UM_IncludePath);$(KIT_SHARED_IncludePath)\;$(KM_IncludePath);$(NET_IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntDir);$(UCRT_IncludePath);$(UM_IncludePath);$(KIT_SHARED_IncludePath)\;$(KM_IncludePath);$(NET_IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
